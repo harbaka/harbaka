@@ -1,0 +1,9 @@
+part 1
+1, git checkout -b branch_name
+2,fast forward -  a straight line of history  recursive merge-  multiple line.
+3,git checkout branch_name
+4,git branch -d name_branch
+5,If two people have changed 
+the same lines in a file at the sametime, or if one developer
+ deletes a file while another developer is modifying it
+
