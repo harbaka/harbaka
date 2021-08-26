@@ -1,0 +1,117 @@
+//1,
+function doubleValues(arr){
+    const doubleArr=[];
+    arr.forEach(function(val){
+        doubleArr.push(val*2);
+    })
+    return doubleArr;
+}
+//2,
+function onlyEvenValues(arr)
+{
+    const onlyEven=[];
+    arr.forEach(function(val){
+        
+        if(val%2===0)
+        {
+            onlyEven.push(val);
+        }
+        return onlyEven;
+    });
+}
+//3,
+function showFirstAndLast(arr){
+    const firstAndLast=[];
+    arr.forEach(function(val){
+        firstAndLast.push(val[0]+val[val.length-1]);
+
+    })
+    return firstAndLast;
+}
+//4,
+function addKeyAndValue(arrObject,key,value){
+    
+        arrObject.forEach(function(val) {
+          val[key] = value;
+        });
+        return arrObject;
+      
+}
+//5
+function vowelCount(string) {
+    let stringArr = string.split("");
+    let obj = {};
+    const vowels = "AEIOU";
+  
+    stringArr.forEach(function(le) {
+      let capWord = le.toUpperCase()
+      if (vowels.indexOf(capWord) !== -1) {
+        if (obj[capWord]) {
+          obj[capWord]++;
+        } else {
+          obj[capWord] = 1;
+        }
+      }
+    });
+    return obj;
+  }
+
+  //map 1
+  function doubleValuesWithMap(arr) {
+    let newArr=[];
+      arr.map(function(val) {
+      newArr= val * 2;
+     return newArr;
+    });
+}
+//2
+function valTimesIndex(arr) {
+    return arr.map(function(val, idex) {
+      return val * idex;
+    });
+  }
+ //3 
+function extractKey(arr, key) {
+    return arr.map(function(val) {
+      return val[key];
+    });
+  }
+//4
+
+function extractFullName(arr) {
+    return arr.map(function(val) {
+      return val.first + " " + val.last;
+    });
+  }
+
+//filter
+//1
+function filterByValue(arr, key) {
+    return arr.filter(function(val) {
+      return val[key] !== undefined;
+    });
+  }
+//2  
+function find(arr, searchValue) {
+    return arr.filter(function(val) {
+      return val === searchValue;
+    })[0];
+  }
+//3  
+function findInObj(arr, key, searchValue) {
+    return arr.filter(function(val) {
+      return val[key] === searchValue;
+    })[0];
+  }
+  
+//4
+function removeVowels(str) {
+    const vowels = "aeiou";
+    return str
+      .toUpperCase()
+      .split("")
+      .filter(function(val) {
+        return vowels.indexOf(val) === -1;
+      })
+      .join("");
+  }
